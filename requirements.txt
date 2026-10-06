@@ -1,0 +1,10 @@
+# requirements.txt Python dependencies
+
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg[binary]
+pydantic-settings
+pwdlib[argon2]
+PyJWT
+python-multipart
