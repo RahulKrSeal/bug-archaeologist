@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Bug Archaeologist — Historical Bug Intelligence Platform"
+    >
+
+    <title>
+        Bug Archaeologist | Authentication
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/frontend/style.css"
+    >
+
+</head>
+
+
+<body class="auth-page">
+
+
+    <!-- =====================================================
+         BACKGROUND EFFECTS
+         ===================================================== -->
+
+    <div class="background-grid"></div>
+
+    <div class="background-glow glow-blue"></div>
+
+    <div class="background-glow glow-green"></div>
+
+
+    <!-- =====================================================
+         TOP NAVIGATION
+         ===================================================== -->
+
+    <header class="auth-header">
+
+        <div class="brand">
+
+            <div class="brand-mark">
+
+                <span class="brand-mark-top">B</span>
+                <span class="brand-mark-bottom">A</span>
+
+            </div>
+
+
+            <div class="brand-copy">
+
+                <div class="brand-name">
+                    BUG ARCHAEOLOGIST
+                </div>
+
+                <div class="brand-tagline">
+                    Historical Bug Intelligence
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Sign In / Sign Up navigation -->
+
+        <nav class="auth-switch">
+
+            <button
+                type="button"
+                id="nav-sign-in"
+                class="auth-switch-button active"
+            >
+                Sign In
+            </button>
+
+
+            <button
+                type="button"
+                id="nav-sign-up"
+                class="auth-switch-button"
+            >
+                Sign Up
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN AUTHENTICATION STAGE
+         ===================================================== -->
+
+    <main
+        class="auth-layout"
+        id="auth-layout"
+    >
+
+
+        <!-- =================================================
+             SIGN IN PANEL
+             ================================================= -->
+
+        <section
+            class="auth-screen sign-in-screen"
+            aria-label="Sign in"
+        >
+
+
+            <!-- LEFT SIDE — SIGN IN FORM -->
+
+            <div class="auth-form-area">
+
+
+                <!-- Small system indicator -->
+
+                <div class="system-status">
+
+                    <span class="status-dot"></span>
+
+                    <span>
+                        ARCHIVE SYSTEM ONLINE
+                    </span>
+
+                </div>
+
+
+                <!-- Authentication heading -->
+
+                <div class="auth-panel-header">
+
+                    <div class="panel-label">
+
+                        <span class="label-line"></span>
+
+                        AUTHENTICATION
+
+                    </div>
+
+
+                    <h1>
+
+                        Welcome
+                        <span>back.</span>
+
+                    </h1>
+
+
+                    <p>
+
+                        Enter your credentials to access
+                        the historical intelligence workspace.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- General status message -->
+
+                <div
+                    id="status-message"
+                    class="status-message"
+                    hidden
+                ></div>
+
+
+
+                <!-- Sign In Form -->
+
+                <form
+                    id="login-form"
+                    class="auth-form"
+                >
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label
+                            for="login-email"
+                        >
+                            Email Address
+                        </label>
+
+
+                        <div class="input-shell">
+
+                            <span class="input-icon">
+
+                                @
+
+                            </span>
+
+
+                            <input
+                                type="email"
+                                id="login-email"
+                                placeholder="you@company.com"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Password -->
+
+                    <div class="form-group">
+
+                        <div class="label-row">
+
+                            <label
+                                for="login-password"
+                            >
+                                Password
+                            </label>
+
+                            <span class="field-hint">
+                                Protected
+                            </span>
+
+                        </div>
+
+
+                        <div class="input-shell">
+
+                            <span class="input-icon">
+
+                                ◆
+
+                            </span>
+
+
+                            <input
+                                type="password"
+                                id="login-password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="login-password"
+                                aria-label="Show password"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Sign In Button -->
+
+                    <button
+                        type="submit"
+                        id="login-button"
+                        class="primary-button"
+                    >
+
+                        <span class="button-content">
+
+                            <span class="button-text">
+                                Enter Workspace
+                            </span>
+
+                            <span
+                                class="button-loader"
+                                hidden
+                            >
+                                Authenticating...
+                            </span>
+
+                            <span class="button-arrow">
+                                →
+                            </span>
+
+                        </span>
+
+                    </button>
+
+
+                </form>
+
+
+
+                <!-- Bottom helper -->
+
+                <div class="auth-bottom">
+
+                    <span>
+                        New to Bug Archaeologist?
+                    </span>
+
+
+                    <button
+                        type="button"
+                        class="inline-switch"
+                        id="inline-sign-up"
+                    >
+                        Create an account →
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- RIGHT SIDE — PRODUCT STORY -->
+
+            <aside class="auth-visual-area">
+
+
+                <div class="visual-orbit orbit-one"></div>
+                <div class="visual-orbit orbit-two"></div>
+                <div class="visual-orbit orbit-three"></div>
+
+
+                <div class="visual-content">
+
+
+                    <!-- Product badge -->
+
+                    <div class="product-badge">
+
+                        <span class="badge-dot"></span>
+
+                        HISTORICAL INTELLIGENCE ENGINE
+
+                    </div>
+
+
+
+                    <!-- Main visual heading -->
+
+                    <h2>
+
+                        Every bug
+                        <br>
+
+                        leaves a
+                        <span>trace.</span>
+
+                    </h2>
+
+
+                    <p class="visual-description">
+
+                        Bug Archaeologist explores the history
+                        behind software failures — connecting
+                        previous bugs, fixes, code changes and
+                        the developers who solved them.
+
+                    </p>
+
+
+
+                    <!-- Intelligence flow -->
+
+                    <div class="intelligence-flow">
+
+
+                        <div class="flow-node">
+
+                            <div class="flow-number">
+                                01
+                            </div>
+
+                            <div class="flow-info">
+
+                                <strong>
+                                    DISCOVER
+                                </strong>
+
+                                <span>
+                                    Historical changes
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="flow-connector"></div>
+
+
+
+                        <div class="flow-node">
+
+                            <div class="flow-number">
+                                02
+                            </div>
+
+                            <div class="flow-info">
+
+                                <strong>
+                                    CONNECT
+                                </strong>
+
+                                <span>
+                                    Similar incidents
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="flow-connector"></div>
+
+
+
+                        <div class="flow-node">
+
+                            <div class="flow-number">
+                                03
+                            </div>
+
+                            <div class="flow-info">
+
+                                <strong>
+                                    UNDERSTAND
+                                </strong>
+
+                                <span>
+                                    Root causes & fixes
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- Terminal-style visual -->
+
+                    <div class="terminal-card">
+
+                        <div class="terminal-header">
+
+                            <div class="terminal-lights">
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                            </div>
+
+                            <span>
+                                archaeology.engine
+                            </span>
+
+                        </div>
+
+
+                        <div class="terminal-body">
+
+                            <div class="terminal-line">
+
+                                <span class="terminal-symbol">
+                                    $
+                                </span>
+
+                                <span>
+                                    analyze --history
+                                </span>
+
+                            </div>
+
+
+                            <div class="terminal-line muted">
+
+                                <span>
+                                    →
+                                </span>
+
+                                scanning historical changes...
+                            </div>
+
+
+                            <div class="terminal-line success-line">
+
+                                <span>
+                                    ✓
+                                </span>
+
+                                historical patterns detected
+                            </div>
+
+
+                            <div class="terminal-line blue-line">
+
+                                <span>
+                                    +
+                                </span>
+
+                                similar fixes identified
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- Visual corner metadata -->
+
+                <div class="visual-meta">
+
+                    <span>
+                        BA / 001
+                    </span>
+
+                    <span>
+                        INTELLIGENCE CORE
+                    </span>
+
+                </div>
+
+
+            </aside>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SIGN UP PANEL
+             ================================================= -->
+
+        <section
+            class="auth-screen sign-up-screen"
+            aria-label="Sign up"
+        >
+
+
+            <!-- LEFT SIDE — PRODUCT STORY -->
+
+            <aside class="auth-visual-area signup-visual">
+
+
+                <div class="visual-orbit orbit-one"></div>
+                <div class="visual-orbit orbit-two"></div>
+                <div class="visual-orbit orbit-three"></div>
+
+
+                <div class="visual-content">
+
+
+                    <div class="product-badge">
+
+                        <span class="badge-dot green"></span>
+
+                        BUILD YOUR ARCHAEOLOGY WORKSPACE
+
+                    </div>
+
+
+
+                    <h2>
+
+                        Don't just fix
+                        <br>
+
+                        the bug.
+                        <span>Understand it.</span>
+
+                    </h2>
+
+
+                    <p class="visual-description">
+
+                        Create your workspace and start building
+                        a searchable history of the software problems
+                        your projects have already faced.
+
+                    </p>
+
+
+
+                    <!-- Feature cards -->
+
+                    <div class="feature-stack">
+
+
+                        <div class="feature-card">
+
+                            <div class="feature-icon">
+                                ◈
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Historical Context
+                                </strong>
+
+                                <span>
+                                    Understand what changed before
+                                    a problem appeared.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="feature-card">
+
+                            <div class="feature-icon green-icon">
+                                ⌁
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Similarity Intelligence
+                                </strong>
+
+                                <span>
+                                    Connect new problems with
+                                    previous incidents.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="feature-card">
+
+                            <div class="feature-icon">
+                                ⟐
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Developer & Fix History
+                                </strong>
+
+                                <span>
+                                    Discover who solved similar
+                                    problems and how.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="visual-meta">
+
+                    <span>
+                        BA / 002
+                    </span>
+
+                    <span>
+                        ARCHIVE INITIALIZATION
+                    </span>
+
+                </div>
+
+
+            </aside>
+
+
+
+            <!-- RIGHT SIDE — SIGN UP FORM -->
+
+            <div class="auth-form-area">
+
+
+                <div class="system-status">
+
+                    <span class="status-dot green"></span>
+
+                    <span>
+                        NEW ARCHIVE REGISTRATION
+                    </span>
+
+                </div>
+
+
+
+                <div class="auth-panel-header">
+
+                    <div class="panel-label">
+
+                        <span class="label-line green-line"></span>
+
+                        CREATE WORKSPACE
+
+                    </div>
+
+
+                    <h1>
+
+                        Start your
+                        <span>investigation.</span>
+
+                    </h1>
+
+
+                    <p>
+
+                        Verify your email first.
+                        Then create the account that will
+                        own your Bug Archaeologist workspace.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- Sign Up Form -->
+
+                <form
+                    id="register-form"
+                    class="auth-form"
+                >
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label
+                            for="register-email"
+                        >
+                            Email Address
+                        </label>
+
+
+                        <div class="email-verification-row">
+
+
+                            <div class="input-shell">
+
+                                <span class="input-icon">
+                                    @
+                                </span>
+
+
+                                <input
+                                    type="email"
+                                    id="register-email"
+                                    placeholder="you@company.com"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                id="verify-email-button"
+                                class="secondary-button"
+                                disabled
+                            >
+
+                                <span class="button-text">
+                                    Verify
+                                </span>
+
+                                <span
+                                    class="button-loader"
+                                    hidden
+                                >
+                                    Sending...
+                                </span>
+
+                            </button>
+
+
+                        </div>
+
+
+                        <div
+                            id="email-verification-status"
+                            class="email-verification-status"
+                            hidden
+                        ></div>
+
+                    </div>
+
+
+
+                    <!-- Username -->
+
+                    <div class="form-group">
+
+                        <label
+                            for="register-username"
+                        >
+                            Username
+                        </label>
+
+
+                        <div class="input-shell">
+
+                            <span class="input-icon">
+                                ◉
+                            </span>
+
+
+                            <input
+                                type="text"
+                                id="register-username"
+                                placeholder="Choose your username"
+                                autocomplete="username"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Password -->
+
+                    <div class="form-group">
+
+                        <div class="label-row">
+
+                            <label
+                                for="register-password"
+                            >
+                                Password
+                            </label>
+
+                            <span class="field-hint">
+                                Encrypted
+                            </span>
+
+                        </div>
+
+
+                        <div class="input-shell">
+
+                            <span class="input-icon">
+                                ◆
+                            </span>
+
+
+                            <input
+                                type="password"
+                                id="register-password"
+                                placeholder="Create a strong password"
+                                autocomplete="new-password"
+                                required
+                            >
+
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="register-password"
+                                aria-label="Show password"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Create Account -->
+
+                    <button
+                        type="submit"
+                        id="register-button"
+                        class="primary-button green-button"
+                        disabled
+                    >
+
+                        <span class="button-content">
+
+                            <span class="button-text">
+                                Create Account
+                            </span>
+
+                            <span
+                                class="button-loader"
+                                hidden
+                            >
+                                Creating account...
+                            </span>
+
+                            <span class="button-arrow">
+                                →
+                            </span>
+
+                        </span>
+
+                    </button>
+
+
+
+                    <p class="form-note">
+
+                        <span class="note-icon">
+                            ✓
+                        </span>
+
+                        Your account is created only after
+                        successful email verification.
+
+                    </p>
+
+
+                </form>
+
+
+
+                <!-- Bottom helper -->
+
+                <div class="auth-bottom">
+
+                    <span>
+                        Already have an account?
+                    </span>
+
+
+                    <button
+                        type="button"
+                        class="inline-switch"
+                        id="inline-sign-in"
+                    >
+                        Sign in →
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="auth-footer">
+
+        <div class="footer-left">
+
+            <span class="footer-brand">
+                BUG ARCHAEOLOGIST
+            </span>
+
+            <span class="footer-divider">
+                /
+            </span>
+
+            <span>
+                Historical Bug Intelligence
+            </span>
+
+        </div>
+
+
+        <div class="footer-right">
+
+            <span>
+                SECURE AUTHENTICATION
+            </span>
+
+            <span class="footer-secure-dot"></span>
+
+            <span>
+                JWT
+            </span>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script
+        src="/frontend/script.js"
+    ></script>
+
+
+</body>
+
+</html>
