@@ -8,6 +8,7 @@ pydantic-settings
 pwdlib[argon2]
 PyJWT
 python-multipart
+alembic
 
 # Python       3.14.5
 # FastAPI      0.142.2
